@@ -8,7 +8,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 //this is the test case
-describe('App test', () => {
+describe('App component tests', () => {
+	// smoke test:
 	it('renders without crashing', () => {
 		// first create a DOM element to render the component into
 		const div = document.createElement('div');
