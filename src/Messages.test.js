@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Messages from './Messages';
-
 import renderer from 'react-test-renderer'; // add snapshot tests
+
+import Messages from './Messages';
 
 describe('Messages test', () => {
 	it('renders without crashing', () => {
