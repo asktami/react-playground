@@ -7,6 +7,10 @@ import './App.css';
 
 import Tooltip from './composition/Tooltip';
 
+import TheDate from './state/TheDate';
+
+import { Counter } from './state/Counter';
+
 function myFunc() {
 	alert('This is myFunc - its just an alert!');
 }
@@ -33,6 +37,12 @@ export default class App extends React.Component {
 					This is the content for the left `Split`. Lorem ipsum dolor sit amet
 					consectetur, adipisicing elit. Incidunt ex velit suscipit facere
 					officia?
+					<br />
+					<br />
+					<Counter count={120} />
+					<br />
+					<br />
+					<TheDate />
 					<br />
 					<br />
 					<Messages name="Messages" unread={0} />

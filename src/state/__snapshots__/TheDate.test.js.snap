@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TheDate Component renders the UI as expected 1`] = `
+<div>
+  Current DateTime: 
+  8/11/2019, 7:44:03 PM
+</div>
+`;
