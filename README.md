@@ -1,7 +1,6 @@
-#react-playground
+# react-playground
 
 [View Live]( https://asktami.github.io/react-playground/)
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
