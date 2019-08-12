@@ -60,7 +60,7 @@ export class Bomb extends React.Component {
 	render() {
 		console.log('called render');
 		return (
-			<div>
+			<div className="Bomb">
 				<p>{this.state.display}</p>
 			</div>
 		);

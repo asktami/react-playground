@@ -26,7 +26,7 @@ export class HelloWorld extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="HelloWorld">
 				<p>Hello, {this.state.who}!</p>
 				<button onClick={this.handleButtonClick(this.props.who)}>
 					Change to {this.props.who}

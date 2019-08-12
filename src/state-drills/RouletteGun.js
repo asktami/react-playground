@@ -74,6 +74,15 @@ export class RouletteGun extends React.Component {
 	/*
 	Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.
 
+	ANSWER: this.handleButtonClick() is WRONG because happening inside render(), inside render need to pass the function without params like so:
+		this.handleButtonClick
+
+	NOTE: can use params IF passing a parameter inside render, like so:s
+		<button onClick={() => this.handleButtonClick(id)} />
+		or
+		<button onClick={this.handleButtonClick.bind(this, id)} />
+
+-------------------------------------------
 
 	Same thing happens if do:
 
