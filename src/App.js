@@ -11,6 +11,10 @@ import TheDate from './state/TheDate';
 
 import { Counter } from './state/Counter';
 
+import { HelloWorld } from './state-drills/HelloWorld';
+import { Bomb } from './state-drills/Bomb';
+import { RouletteGun } from './state-drills/RouletteGun';
+
 function myFunc() {
 	alert('This is myFunc - its just an alert!');
 }
@@ -32,6 +36,15 @@ export default class App extends React.Component {
 		return (
 			<main className="App">
 				<Split className="left" flexBasis={2}>
+					<RouletteGun />
+					<br />
+					<br />
+					<Bomb />
+					<br />
+					<br />
+					<HelloWorld />
+					<br />
+					<br />
 					<h1>YOUR APPLICATION NAME!</h1>
 					<div>Hello!</div>
 					This is the content for the left `Split`. Lorem ipsum dolor sit amet
