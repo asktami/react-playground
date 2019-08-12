@@ -17,7 +17,7 @@ export class Bomb extends React.Component {
 
 	componentDidMount() {
 		console.log('called componentDidMount');
-		let interval = setInterval(() => {
+		this.interval = setInterval(() => {
 			console.log('called setInterval');
 
 			// update the DOM with the new state, every second

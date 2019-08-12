@@ -36,32 +36,33 @@ export default class App extends React.Component {
 		return (
 			<main className="App">
 				<Split className="left" flexBasis={2}>
-					<RouletteGun />
-					<br />
-					<br />
-					<Bomb />
-					<br />
-					<br />
-					<HelloWorld />
-					<br />
-					<br />
 					<h1>YOUR APPLICATION NAME!</h1>
 					<div>Hello!</div>
 					This is the content for the left `Split`. Lorem ipsum dolor sit amet
 					consectetur, adipisicing elit. Incidunt ex velit suscipit facere
 					officia?
-					<br />
-					<br />
+					<hr />
+					<h2>RouletteGun</h2>
+					<RouletteGun />
+					<hr />
+					<h2>Bomb</h2>
+					<Bomb />
+					<hr />
+					<h2>HelloWorld</h2>
+					<HelloWorld />
+					<hr />
+					<h2>Counter</h2>
 					<Counter count={120} />
-					<br />
-					<br />
+					<hr />
+					<h2>TheDate</h2>
 					<TheDate />
-					<br />
+					<hr />
+					<h2>Messages</h2>
 					<br />
 					<Messages name="Messages" unread={0} />
 					<Messages name="Notifications" unread={10} />
-					<br />
-					<br />
+					<hr />
+					<h2>Tooltips</h2>
 					{/* make another tooltip directly inside the App */}
 					<Tooltip message="one more tooltip message">Necessitatibus?</Tooltip>
 					<br />
@@ -70,8 +71,8 @@ export default class App extends React.Component {
 					<br />
 					<br />
 					{secondTooltip}
-					<br />
-					<br />
+					<hr />
+					<h2>MyFunction</h2>
 					<button onClick={myFunc}>Click Me</button>
 				</Split>
 				<Split className="right">
