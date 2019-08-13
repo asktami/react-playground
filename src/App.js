@@ -36,11 +36,12 @@ export default class App extends React.Component {
 		return (
 			<main className="App">
 				<Split className="left" flexBasis={2}>
-					<h1>YOUR APPLICATION NAME!</h1>
+					<h1>My React Playground</h1>
 					<div>Hello!</div>
-					This is the content for the left `Split`. Lorem ipsum dolor sit amet
-					consectetur, adipisicing elit. Incidunt ex velit suscipit facere
-					officia?
+					This is the content for the left `Split`.
+					<br />
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ex
+					velit suscipit facere officia?
 					<hr />
 					<h2>RouletteGun</h2>
 					<RouletteGun />
@@ -76,9 +77,10 @@ export default class App extends React.Component {
 					<button onClick={myFunc}>Click Me</button>
 				</Split>
 				<Split className="right">
-					This is the content for the right `Split`. Inventore aliquid
-					cupiditate suscipit repellat. Quaerat quis officiis quam fuga. Aliquid
-					quo possimus id soluta aspernatur.
+					This is the content for the right `Split`.
+					<br />
+					Inventore aliquid cupiditate suscipit repellat. Quaerat quis officiis
+					quam fuga. Aliquid quo possimus id soluta aspernatur.
 				</Split>
 			</main>
 		);
