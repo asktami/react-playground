@@ -35,7 +35,9 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<main className="App">
-				<Split className="left" flexBasis={2}>
+				<Split 
+				className="left" 
+				flexBasis={2}>
 					<h1>My React Playground</h1>
 					<div>Hello!</div>
 					This is the content for the left `Split`.
@@ -60,8 +62,12 @@ export default class App extends React.Component {
 					<hr />
 					<h2>Messages</h2>
 					<br />
-					<Messages name="Messages" unread={0} />
-					<Messages name="Notifications" unread={10} />
+					<Messages 
+					name="Messages" 
+					unread={0} />
+					<Messages 
+					name="Notifications" 
+					unread={10} />
 					<hr />
 					<h2>Tooltips</h2>
 					{/* make another tooltip directly inside the App */}
@@ -76,7 +82,8 @@ export default class App extends React.Component {
 					<h2>MyFunction</h2>
 					<button onClick={myFunc}>Click Me</button>
 				</Split>
-				<Split className="right">
+				<Split 
+				className="right">
 					This is the content for the right `Split`.
 					<br />
 					Inventore aliquid cupiditate suscipit repellat. Quaerat quis officiis

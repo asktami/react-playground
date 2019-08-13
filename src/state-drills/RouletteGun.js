@@ -1,4 +1,6 @@
 /*
+RouletteGun
+
 A component that combines state and props. The parent of this component will pass in a prop that says which number chamber contains a bullet, the chamber should be between 1 and 8. When a user clicks on a button, the component will choose a random chamber and pull the trigger! If the chamber with the bullet in is chosen, the component will render BANG!!!!
 */
 
