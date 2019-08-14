@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordian Component only open the last section clicked, open section 3 1`] = `
+<div>
+  <ul
+    className="accordianList"
+  >
+    <li
+      key="0"
+    >
+      <button
+        className="accordion"
+        onClick={[Function]}
+      >
+        Section 1
+      </button>
+    </li>
+    <li
+      key="1"
+    >
+      <button
+        className="accordion"
+        onClick={[Function]}
+      >
+        Section 2
+      </button>
+    </li>
+    <li
+      key="2"
+    >
+      <button
+        className="accordion"
+        onClick={[Function]}
+      >
+        Section 3
+      </button>
+      <div
+        className="panel"
+      >
+        <p>
+          Section 3: Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Accordian Component opens one section at a time, the clicked section, open section 2 1`] = `
+<div>
+  <ul
+    className="accordianList"
+  >
+    <li
+      key="0"
+    >
+      <button
+        className="accordion"
+        onClick={[Function]}
+      >
+        Section 1
+      </button>
+    </li>
+    <li
+      key="1"
+    >
+      <button
+        className="accordion"
+        onClick={[Function]}
+      >
+        Section 2
+      </button>
+    </li>
+    <li
+      key="2"
+    >
+      <button
+        className="accordion"
+        onClick={[Function]}
+      >
+        Section 3
+      </button>
+      <div
+        className="panel"
+      >
+        <p>
+          Section 3: Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Accordian Component renders an empty li when the sections prop is not supplied 1`] = `
+<div>
+  <ul
+    className="accordianList"
+  />
+</div>
+`;
+
+exports[`Accordian Component renders no sections by default 1`] = `
+<div>
+  <ul
+    className="accordianList"
+  >
+    <li
+      key="0"
+    >
+      <button
+        className="accordion"
+        onClick={[Function]}
+      >
+        Section 1
+      </button>
+    </li>
+    <li
+      key="1"
+    >
+      <button
+        className="accordion"
+        onClick={[Function]}
+      >
+        Section 2
+      </button>
+    </li>
+    <li
+      key="2"
+    >
+      <button
+        className="accordion"
+        onClick={[Function]}
+      >
+        Section 3
+      </button>
+    </li>
+  </ul>
+</div>
+`;

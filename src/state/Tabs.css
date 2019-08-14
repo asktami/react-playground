@@ -1,0 +1,9 @@
+/* Style the buttons that are used to open the tab content */
+.tabButtons {
+	cursor: pointer;
+}
+
+/* Change background color of buttons on hover */
+.tabButtons:hover {
+	background-color: yellow;
+}
