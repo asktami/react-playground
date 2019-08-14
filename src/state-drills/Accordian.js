@@ -15,27 +15,38 @@ export class Accordian extends React.Component {
 
 	// default array index/section/button clicked/currentSectionIndex = 0
 	state = {
-		currentSectionIndex: null,
-		active: false // highlight current section
+		currentSectionIndex: null
+	};
+
+	toggleActive = index => e => {
+		// remove active class from anything that has active class
+		// then add active class to the selected button
+		if (document.querySelector('.active') !== null) {
+			document.querySelector('.active').classList.remove('active');
+		}
+		index.currentTarget.classList.add('active');
 	};
 
 	// property initializer syntax
 	// it binds the event handler to the class AND lets you pass an argument (index) to the function/method on event (e) or ()
-	handleButtonClick = index => () => {
-		console.log('button clicked!', { index });
-
+	handleButtonClick = index => event => {
 		this.setState({ currentSectionIndex: index });
 
-		// QUESTION:
-		// to highlight active section
-		const currentState = this.state.active;
-		this.setState({ active: !currentState });
+		// QUESTION - how to get toggleActive to work???
+		// this.toggleActive(index);
+
+		// remove active class from anything that has active class
+		// then add active class to the selected button
+		if (document.querySelector('.active') !== null) {
+			document.querySelector('.active').classList.remove('active');
+		}
+		event.currentTarget.classList.add('active');
 	};
 
 	renderButtons() {
 		// VERTICAL LIST OF BUTTONS
 		const { sections } = this.props; // because only 1 props property
-		const currentSectionIndex = this.state.currentSectionIndex; // because more than 1 state property
+		const { currentSectionIndex } = this.state; // because only 1 state property
 
 		const buttonList = sections.map((section, index) => (
 			<li key={index}>
