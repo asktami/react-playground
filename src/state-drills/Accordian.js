@@ -32,9 +32,6 @@ export class Accordian extends React.Component {
 	handleButtonClick = index => event => {
 		this.setState({ currentSectionIndex: index });
 
-		// QUESTION - how to get toggleActive to work???
-		// this.toggleActive(index);
-
 		// remove active class from anything that has active class
 		// then add active class to the selected button
 		if (document.querySelector('.active') !== null) {

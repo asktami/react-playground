@@ -1,5 +1,7 @@
 /*
 A component that uses life-cycles, setInterval and state to alternate between rendering either "tick" or "tock" until a time passes and then rendering "BOOM!!!!".
+
+See BombAlt.js for better solution!
 */
 
 import React from 'react';
@@ -15,6 +17,8 @@ export class Bomb extends React.Component {
 		display: this.props.display
 	};
 
+	// componentDidMount called by default after render()
+	// if did NOT use componentDidMount would need to create and call some other function that had the interval in it
 	componentDidMount() {
 		console.log('called componentDidMount');
 		this.interval = setInterval(() => {
@@ -52,7 +56,6 @@ export class Bomb extends React.Component {
 	/* componentWillUnmount cleans up the interval when the component is removed from the DOM. We don't want any setInterval's hanging around when they shouldn't be!
 	 */
 	componentWillUnmount() {
-		// QUESTION - why can't I use interval? why must I user this.interval?
 		console.log('called componentWillUnmount');
 		clearInterval(this.interval);
 	}

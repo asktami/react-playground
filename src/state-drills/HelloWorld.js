@@ -15,7 +15,7 @@ export class HelloWorld extends React.Component {
 		who: this.props.who
 	};
 
-	// QUESTION: What is this syntax???
+	// QUESTION: What is this syntax?
 	// ANSWER: property initializer syntax
 	// it binds the event handler to the class AND lets you pass an argument (newValue) to the function/method on event (e) or ()
 	handleButtonClick = newValue => () => {
