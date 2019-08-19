@@ -19,6 +19,8 @@ import { RouletteGun } from './state-drills/RouletteGun';
 
 import { Accordian } from './state-drills/Accordian';
 
+import DemonynApp from './DemonymApp/DemonymApp';
+
 function myFunc() {
 	alert('This is myFunc - its just an alert!');
 }
@@ -84,6 +86,9 @@ export default class App extends React.Component {
 					<br />
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ex
 					velit suscipit facere officia?
+					<hr />
+					<h2>DemonynApp</h2>
+					<DemonynApp />
 					<hr />
 					<h2>Accordian</h2>
 					<Accordian sections={sectionsProp} />
