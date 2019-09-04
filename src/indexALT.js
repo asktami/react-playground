@@ -5,12 +5,13 @@ import './index.css'; // relative import of CSS file, enabled by webpack
 import App from './App'; // relative import of variable named App
 
 import AppLang from './lang-context/AppLang'; // using context & class components
-// import AppLangAlt from './lang-contextAlt/AppLangAlt'; // using context & function components
+import AppLangAlt from './lang-contextAlt/AppLangAlt'; // using context & function components
 
 ReactDOM.render(
 	<>
 		<App />
 		<AppLang />
+		<AppLangAlt />
 	</>,
 	document.getElementById('root')
 );

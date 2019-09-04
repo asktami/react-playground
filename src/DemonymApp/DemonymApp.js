@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// using trackPromise so can use LoadingIndicator
 import { trackPromise } from 'react-promise-tracker';
 import LoadingIndicator from '../Loading/Loading';
 
@@ -73,22 +74,22 @@ class DemonymApp extends Component {
 
 		const error = this.state.error ? (
 			<div className="demonym_app__error">{this.state.error}</div>
-		) : (
-			<>
-				<LoadingIndicator />
-			</>
-		);
+		) : null;
 
+		const countrySelect = this.state.countries ? (
+			<CountrySelector
+				countries={this.state.countries}
+				// hardcoded
+				// countries={[{ name: 'Barbados' }, { name: 'Bahrain' }]}
+				changeHandler={selected => this.setSelected(selected)}
+			/>
+		) : (
+			<LoadingIndicator />
+		);
 		return (
 			<div className="demonym_app">
 				{error}
-				<CountrySelector
-					countries={this.state.countries}
-					// hardcoded
-					// countries={[{ name: 'Barbados' }, { name: 'Bahrain' }]}
-
-					changeHandler={selected => this.setSelected(selected)}
-				/>
+				{countrySelect}
 				{demon}
 			</div>
 		);

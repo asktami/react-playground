@@ -3,9 +3,11 @@ import React from 'react';
 // https://lemoncode.github.io/react-promise-tracker/
 // from https://www.basefactor.com/react-how-to-display-a-loading-indicator-on-fetch-calls
 
+// 1. npm install react-promise-tracker --save
+
 // from https://www.npmjs.com/package/react-loader-spinner
 // loading spinner get via npm:
-//  npm install react-loader-spinner --save
+//  2. npm install react-loader-spinner --save
 
 import Loader from 'react-loader-spinner';
 import { usePromiseTracker } from 'react-promise-tracker';
