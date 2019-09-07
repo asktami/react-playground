@@ -7,10 +7,13 @@ import App from './App'; // relative import of variable named App
 import AppLang from './lang-context/AppLang'; // using context & class components
 // import AppLangAlt from './lang-contextAlt/AppLangAlt'; // using context & function components
 
+import RegistrationForm from './registrationForm/registrationForm'; // form with controlled components - uses state
+
 ReactDOM.render(
 	<>
 		<App />
 		<AppLang />
+		<RegistrationForm />
 	</>,
 	document.getElementById('root')
 );
