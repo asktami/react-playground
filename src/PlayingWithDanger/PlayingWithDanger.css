@@ -1,0 +1,11 @@
+.error {
+	color: red;
+}
+
+.PlayingWithDanger {
+	display: flex;
+	flex-direction: column;
+	margin: 40px;
+	padding-bottom: 40px;
+	border-bottom: 1px solid black;
+}

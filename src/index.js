@@ -9,11 +9,14 @@ import AppLang from './lang-context/AppLang'; // using context & class component
 
 import RegistrationForm from './registrationForm/registrationForm'; // form with controlled components - uses state
 
+import PlayingWithDanger from './PlayingWithDanger/PlayingWithDanger'; // error boundary
+
 ReactDOM.render(
 	<>
 		<App />
 		<AppLang />
 		<RegistrationForm />
+		<PlayingWithDanger />
 	</>,
 	document.getElementById('root')
 );
