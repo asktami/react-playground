@@ -106,6 +106,8 @@ const RegistrationForm = props => {
 	};
 	*/
 
+	// QUESTION: why do we need to put the functions into other variables???
+	// https://courses.thinkful.com/react-v1/checkpoint/17
 	const nameError = validateName();
 	const passwordError = validatePassword();
 	const repeatPasswordError = validateRepeatPassword();
@@ -166,7 +168,13 @@ const RegistrationForm = props => {
 				<button type="reset" className="registration__button">
 					Cancel
 				</button>
-				<button type="submit" className="registration__button">
+				<button
+					type="submit"
+					className="registration__button"
+					disabled={
+						validateName() || validatePassword() || validateRepeatPassword()
+					}
+				>
 					Save
 				</button>
 			</div>

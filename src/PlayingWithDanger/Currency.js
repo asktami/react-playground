@@ -1,3 +1,5 @@
+// NOTE: does NOT work if do not use class!!!
+
 import React from 'react';
 
 class Currency extends React.Component {
