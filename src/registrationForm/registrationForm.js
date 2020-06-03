@@ -34,6 +34,8 @@ const RegistrationForm = props => {
 		console.log('--------e name = ', name);
 		console.log('--------e value = ', value);
 		setValues({ ...values, [name]: { value: value.trim(), touched: true } });
+
+		console.log('state VALUES = ', values);
 	};
 
 	// const updateName = name => {
