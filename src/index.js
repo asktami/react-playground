@@ -11,36 +11,21 @@ import RegistrationForm from './registrationForm/registrationForm'; // form with
 
 import PlayingWithDanger from './PlayingWithDanger/PlayingWithDanger'; // error boundary
 
-ReactDOM.render(
-	<>
+import reportWebVitals from './reportWebVitals';
+
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
 		<App />
 		<AppLang />
 		<RegistrationForm />
 		<PlayingWithDanger />
-	</>,
-	document.getElementById('root')
+  </React.StrictMode>
 );
 
-/*
-When we ran the command npm install, npm took the following steps:
-
-    Read the package.json file.
-    Read the section labeled dependencies inside the JSON file.
-    Saw many dependencies, including react listed as a dependency.
-    Downloaded React (as well as the other dependencies) and saved it into your project within a directory named node_modules.
-
-
-Looking at the first code example, the top has the following line:
-
-	import React from 'react';
-
-
-Once npm has completed the install, it's available for us to import into our code. This is what the import code does. It's creating a variable named React from a location within the node_modules of 'react'.
-
-After adding the above line, we can use React within this file.
-
-
-NOTES:
--- Relative imports require us as developers to specify both the import and the export.
-
-*/
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

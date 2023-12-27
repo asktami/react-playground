@@ -75,8 +75,9 @@ const sectionsProp = [
 	}
 ];
 
-function App() {
-  return (
+export default class App extends React.Component {
+	render() {
+		return (
 			<main className="App">
 				<Split className="left" flexBasis={2}>
 					<h1>My React Playground</h1>
@@ -136,7 +137,12 @@ function App() {
 					quam fuga. Aliquid quo possimus id soluta aspernatur.
 				</Split>
 			</main>
-);
+		);
+	}
 }
 
-export default App;
+// export default App;
+// because we need to export variables in the file we wish to import from
+// here, we're telling JavaScript to export the App variable from the App.js file into any file that asks for it
+// This is called a "default" export
+// to be discussed later: 'named' export

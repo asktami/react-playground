@@ -20,7 +20,7 @@ const PlayingWithDanger = props => {
 				<br />
 			</CurrencyError>
 			<CurrencyError>
-				Invalid: <Currency value={21} locale="de-DE" currency="US" />
+				Invalid: <Currency value={21} locale="de-DE" currency="USD" />
 			</CurrencyError>
 			<h3>
 				The currency values displayed are subject to change without notice.

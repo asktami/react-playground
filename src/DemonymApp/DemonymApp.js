@@ -9,7 +9,9 @@ import './DemonymApp.css';
 import Demonym from './Demonym';
 import CountrySelector from './CountrySelector';
 
-const fetchURL = 'https://country.register.gov.uk/records.json?page-size=5000';
+// this url is no longer valid
+// const fetchURL = 'https://country.register.gov.uk/records.json?page-size=5000';
+const fetchURL = 'https://countriesnow.space/api/v0.1/countries';
 
 class DemonymApp extends Component {
 	constructor(props) {
@@ -31,11 +33,23 @@ class DemonymApp extends Component {
 						console.log('An error did occur, lets throw an error.');
 						throw new Error('Something went wrong'); //throw an error
 					}
+					
 					return response; //ok, so just continue
+					
 				})
 				.then(response => response.json())
-				.then(data => {
-					const countries = Object.keys(data).map(key => data[key].item[0]);
+				.then(responseData => {
+				console.log('Success');
+				console.log('responseData.data: ',responseData.data);
+				console.log('Country: ',responseData.data[0].country);
+				console.log('City: ',responseData.data[0].cities[0]);
+							
+				// const countries = responseData.data.map((item) => ({ ['name']: item.country , ['value']: item.country, ['country']: item.country}));
+			
+			
+			const countries = responseData.data.map((item) => ({ ['name']: item.cities[0] , ['value']: item.cities[0], ['country']: item.country}));
+				console.log('Country List: ', countries);
+				
 					this.setState({
 						countries,
 						error: null
@@ -65,11 +79,11 @@ class DemonymApp extends Component {
 	render() {
 		const demon = this.state.selected ? (
 			<Demonym
-				name={this.state.selected['citizen-names']}
-				country={this.state.selected.name}
+				name={this.state.selected['name']}
+				country={this.state.selected.country}
 			/>
 		) : (
-			<div className="demonym_app__placeholder">Select a country above</div>
+			<div className="demonym_app__placeholder">Select a country (CITY) above</div>
 		);
 
 		const error = this.state.error ? (
@@ -79,7 +93,7 @@ class DemonymApp extends Component {
 		const countrySelect = this.state.countries ? (
 			<CountrySelector
 				countries={this.state.countries}
-				// hardcoded
+				// can be hardcoded as:
 				// countries={[{ name: 'Barbados' }, { name: 'Bahrain' }]}
 				changeHandler={selected => this.setSelected(selected)}
 			/>
